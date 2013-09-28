@@ -1,0 +1,9 @@
+#+TITLE: Gueco: Sistema Experto de Soporte a la Planificación Militar
+#+AUTHOR: cristHian Gz. (gcca), César Cárdenas (cccg)
+#+DATE: 2013-09-27 sam.
+
+* TODO Carátula y diseño base
+
+* TODO Prefacio y/o Introducción del proyecto: objetivos y alcance
+
+* TODO Estado del arte
