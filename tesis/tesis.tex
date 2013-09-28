@@ -1,0 +1,163 @@
+\documentclass[12pt,a4paper,footinclude=true,headinclude=true,spanish]{scrbook}
+
+\usepackage[es-nosectiondot]{babel}
+
+\selectlanguage{spanish}
+
+%\usepackage{url}
+\usepackage{breakurl}
+\PassOptionsToPackage{hidelinks}{hyperref}
+
+\usepackage[eulerchapternumbers,listings,floatperchapter,linedheaders,beramono,eulermath,linedheaders,parts,pdfspacing,dottedtoc]{classicthesis}
+
+\usepackage[style=long,nolist,acronym,sanitize=none]{glossaries}
+%\renewcommand*{\glossaryname}{Glosario}
+\renewcommand*{\acronymname}{Acr\'onimos}
+\makeglossaries
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+%\hypersetup{
+%  pdfborder = {0 0 0}
+%}
+
+\usepackage{natbib}
+
+\usepackage{booktabs}
+\heavyrulewidth=.11em
+\belowrulesep=1.05ex
+\belowbottomsep=0pt
+\aboverulesep=.8ex
+\abovetopsep=0pt
+
+\usepackage{tabularx}
+\usepackage{multirow}
+%\usepackage{longtable}
+%\usepackage{supertabular}
+%\usepackage{bigstrut}
+\usepackage{float}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{latexsym}
+
+
+%\usepackage{color}
+%\usepackage{marginnote}
+%\renewcommand*{\marginfont}{\color{blue}\sffamily}
+\usepackage[shadow,spanish,textsize=footnotesize]{todonotes}
+\let\marginpar\oldmarginpar
+%\usepackage{showframe}
+%\usepackage[marginparwidth=79pt]{geometry}
+
+
+\newcommand*{\ruta}{/gcca/hogar/Dropbox/gcca/gueco/doc/expo/tesis}%
+\input{\ruta/glosario.tex}
+
+\begin{document}
+\frenchspacing
+\raggedbottom
+
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+%\pagenumbering{roman}
+%\pagestyle{plain}
+
+
+\begin{titlepage}
+  \begin{addmargin}[-1cm]{-3cm}
+    \begin{center}
+        \large
+
+        \hfill
+
+        \vfill
+
+        \begingroup
+            \color{Maroon}\spacedallcaps{\emph{Gueco}} \\ \bigskip
+        \endgroup
+        Sistema experto de soporte a la preparación de inteligencia del campo de batalla
+
+        \vfill
+
+        Tesis para optar por el título profesional en Ingeniería de Software
+
+        \vfill
+
+        \spacedlowsmallcaps{Cárdenas Córdova, César Gastón}\\
+        \spacedlowsmallcaps{Gonzales Castillo, Cristhian Alberto}
+
+        \vfill
+
+        %\includegraphics[width=6cm]{gf_bw} \\ \medskip
+
+        Asesor \\
+        \spacedlowsmallcaps{Mauricio Sánchez, David} \\
+        \medskip
+        %\myDegree \\
+        %\myDepartment \\
+        %\myFaculty \\
+        %\myUni \\ \bigskip
+
+        \vfill
+
+        \vfill
+
+        Noviembre\ -- 2012
+
+        \vfill
+
+    \end{center}
+  \end{addmargin}
+\end{titlepage}
+
+
+% RESUMEN
+\chapter*{Resumen}\input{\ruta/resumen.tex}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\newpage
+\listoftodos
+
+
+% cap INTRODUCCIÓN
+\input{\ruta/introduccion.tex}
+
+\cleardoublepage\part{Contexto de la Tesis}
+% cap PROBLEMA
+\input{\ruta/descripcion-del-proyecto.tex}
+
+% cap MARCO-TEÓRICO
+\input{\ruta/marco-teorico.tex}
+
+\cleardoublepage\part{Modelos CommonKADS}
+
+% cap MODELO-CONTEXTUAL
+\input{\ruta/modelo-contextual.tex}
+
+% cap MODELO-CONCEPTUAL
+\input{\ruta/modelo-conceptual.tex}
+
+% cap MODELO-DISEÑO
+\input{\ruta/modelo-dise_no.tex}
+
+\cleardoublepage\part{Validación y Conclusiones}
+% cap VALIDACIÓN
+\input{\ruta/validacion.tex}
+
+% cap CONCLUSIONES
+\input{\ruta/conclusiones.tex}
+
+% BIBLIOGRAFÍA
+\bibliographystyle{plainnat}
+\bibliography{\ruta/tesis}
+
+% GLOSARIO
+\printglossaries
+
+\end{document}

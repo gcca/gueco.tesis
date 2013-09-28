@@ -1,0 +1,181 @@
+\chapter{Descripción de la tesis}
+
+
+%% >>> : - . - . - . - . - o - . - . - . - . - :
+
+\section{Declaración del problema}
+
+\todo{Acá poner acerca del PICB de los calcos, cuadernos usados, etc.}Durante el proceso de la \gls{picb} se requiere la presencia de expertos en el planeamiento estratégico militar, para el diseño, desarrollo y ejecución de las operaciones, en casos de emergencia. Actualmente, esta entidad, ha enfocado sus esfuerzos en la elaboración del Plan Verde, documento donde se establecen las operaciones tácticas a llevar a cabo en caso de una invasión de NEGRO1. Este Plan, al ser sumamente crítico, no puede contener errores. Sin embargo, la posibilidad de error está siempre presente por diversos motivos, por ejemplo: si el especialista no pudo transmitir su conocimiento eficientemente o por un error humano producido por el agotamiento, un mal cálculo u otro motivo asociado a la condición humana.
+
+En el cuadro \ref{cuadro:problemasyposiblescausas} se listan los problemas que pueden ocasionar error en el planeamiento estratégico con sus posibles causas.
+
+\begin{longtable}[H]{p{.4\textwidth}|p{.53\textwidth}}
+  \textbf{Problemas identificados} &  \textbf{Causas}\\\toprule
+  \endhead
+
+
+  Respuesta lenta por parte del experto &
+  \begin{minipage}{.53\textwidth}
+    \begin{itemize}
+    \item Los expertos humanos sufren de agotamiento físico, haciendo que se retrasen en el diseño de sus estrategias.
+    \item Al analizar un escenario complejo el experto necesita más tiempo para el análisis.
+    \end{itemize}
+  \end{minipage}
+  \\\midrule
+
+
+  Ausencia del experto humano &
+  \begin{minipage}{.53\textwidth}
+    \begin{itemize}
+    \item El experto puede estar realizando otra misión.
+    \item El experto podría estar enfermo.
+    \end{itemize}
+  \end{minipage}
+  \\\midrule
+
+
+  Error del experto humano &
+  \begin{minipage}{.53\textwidth}
+    \begin{itemize}
+    \item Error al realizar los cálculos, analizar la situación o emocionalmente no se encuentra apto para realizar su labor.
+    \end{itemize}
+  \end{minipage}
+  \\\midrule
+
+
+  Conocimiento incompleto &
+  \begin{minipage}{.53\textwidth}
+    \begin{itemize}
+    \item Parte del conocimiento es obtenido empíricamente.
+    \item El experto sólo domina un tipo de estrategia.
+    \end{itemize}
+  \end{minipage}
+  \\\bottomrule
+  %\caption[Problemas y posibles causas]{\mbox{Problemas y posibles causas.\newline Fuente: Elaboración propia.}}
+  \caption{Problemas y posibles causas}
+  \label{cuadro:problemasyposiblescausas}
+\end{longtable}
+
+
+%% >>> : - . - . - . - . - o - . - . - . - . - :
+
+\section{Objetivo general de la tesis}
+
+%Esta tesis tiene como objetivo principal desarrollar un sistema experto capaz de procesar la información acerca de una zona de conflicto, emitiendo una serie de consejos acerca de las posibles operaciones a realizar en una determinada situación; para lo cual usará los factores de terreno, clima, situación del ejército propio y ejército enemigo. Así mismo, la tesis se desarrollará en el marco del Plan Verde, es decir, todo lo que implique el desarrollo (contexto de organización, base de conocimiento, zonas de conflicto de análisis, reglas de inferencia y soporte software necesario) estarán en la linde del plan antes mencionado, buscando cubrir lo descrito en él.
+
+El principal objetivo de la tesis es desarrollar un software que permita a un experto militar, que participa en la \gls{picb}, ser asistido en dicho proceso por una herramienta software, el cual será un sistema experto capaz de procesar información acerca de un escenario de conflicto, emitiendo una series de consejos acerca de las maniobras posibles a ejecutar.
+
+\todo{Revisar esta parte}Esta tesis se desarrolla en el marco del Plan Tenacidad\footnote{Para el presente trabajo, el asesor militar proveyó el contexto de un caso práctico (planificación militar) denominado para esta tesis como \emph{Plan Tenacidad}}, es decir, todo lo que implique el desarrollo (contexto de organización, base de conocimiento, zonas de conflicto de análisis, reglas de inferencia y soporte software necesario) estarán en la linde del plan antes mencionado, buscando cubrir lo descrito en él.
+
+
+%% >>> : - . - . - . - . - o - . - . - . - . - :
+
+\section{Objetivos específicos de la tesis}
+
+Los objetivos específicos de \emph{Gueco}, que se detallan a continuación, se fijaron con la intención de proveer una visión general acerca de las partes del problema que el sistema experto debe cumplir.
+
+\begin{description}
+\item[OE1] Formalización de conocimiento del experto militar en reglas para inferencia.
+\item[OE2] Ofrecer un mecanismo basado en mapas similar al de calcos (que es el usado por el experto militar).
+\item[OE3] Diseño de una base de conocimiento extensible.
+\item[OE4] El sistema experto soportará una arquitectura de software distribuido.
+\item[OE5] Permitir que varios usuarios almacenen escenarios individuales.
+\item[OE6] El sistema experto ofrecerá resultados con una confianza mayor que 0,85.
+\end{description}
+
+
+%% >>> : - . - . - . - . - o - . - . - . - . - :
+
+\section{Beneficios y Justificación}
+
+La justificación de esta tesis se centra en crear una herramienta útil para un experto militar que participa en la \gls{picb}. Dicha justificación se sostiene en los beneficios que se presentan a continuación:
+
+\emph{\footnotesize Beneficios tangibles}
+\begin{description}
+\item[B1] Reducción de errores en el diseño de los calcos.
+\item[B2] Reducción del error humano a evaluar un escenario.
+\item[B3] Reducción de costos, al no requerir útiles como hojas de calco, marcadores, mapas impresos, entre otros.
+\item[B4] Base de escenarios preparado para ser consultados.
+\item[B5] Formalización centralizada\footnote{Es decir, contenida en un mismo lugar, en un mismo servidor.}  del conocimiento de diversos expertos.
+\end{description}
+
+\emph{\footnotesize Beneficios intangibles}
+\begin{description}
+\item[B6] Disminución de la complejidad de las actividades del \gls{picb}\todo{arreglar esto en todo lo que diga \emph{...planificación militar}}.
+\end{description}
+
+Los objetivos específicos descritos previamente cubren los beneficios mencionados, los mismos en los que se encuentra fundamentada la utilidad y procesos de elaboración de esta tesis.
+
+
+%% >>> : - . - . - . - . - o - . - . - . - . - :
+
+\section{Plan de trabajo}
+
+\todo{Detallar que significa semana,etc}Para cumplir con el desarrollo de la tesis se planteó el plan de trabajo \ref{cuadro:plandetrabajo} que fue cubierto en dos ciclos académicos con 15 semanas de trabajo cada uno.
+
+\begin{longtable}[H]{p{.8\textwidth}|>{\hfill}p{.13\textwidth}}
+  \textbf{Hitos} & \textbf{Semana} \\\toprule
+  \endhead
+
+  \multicolumn{2}{c}{\textbf{Metodología CommonKADS}}\\\midrule
+
+  Captura de información & 4
+  \\\midrule
+
+  Modelo de organización & 4
+  \\\midrule
+
+  Modelo de tareas & 6
+  \\\midrule
+
+  Modelo de agentes & 8
+  \\\midrule
+
+  Modelo contextual & 8
+  \\\midrule
+
+  Modelo de comunicaciones & 9
+  \\\midrule
+
+  Modelo de conocimiento & 10
+  \\\midrule
+
+  Modelo conceptual & 11
+  \\\midrule
+
+  \multicolumn{2}{c}{\textbf{Fase de
+diseño}}\\\midrule
+
+  Esquema de desarrollo & 12
+  \\\midrule
+
+  Prototipos de interfaces gráficas de usuario & 14
+  \\\midrule
+
+  \multicolumn{2}{c}{\textbf{Metodología CommonKADS}}\\\midrule
+
+  Modelo de artefactos & 14
+  \\\midrule
+
+  \multicolumn{2}{c}{\textbf{Fase de desarrollo}}\\\midrule
+
+  Desarrollo de base de conocimiento & 18
+  \\\midrule
+
+  Desarrollo de base de datos & 19
+  \\\midrule
+
+  Manejo de usuarios & 20
+  \\\midrule
+
+  Manejo de lista de escenarios & 23
+  \\\midrule
+
+  Edición de escenario y mapa & 26
+  \\\midrule
+
+  Integración con motor de inferencia & 28
+  \\\bottomrule
+  \caption{Plan de trabajo}
+  \label{cuadro:plandetrabajo}
+\end{longtable}

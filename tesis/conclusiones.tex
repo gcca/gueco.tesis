@@ -1,0 +1,25 @@
+\chapter{Conclusiones y Trabajos futuros}
+
+El presente trabajo, tuvo como primer objetivo realizar un análisis de la organización, donde se logró identificar, además del proceso en el que se ve involucrado el sistema experto, los activos del conocimiento; que pueden ser libros, manuales, ilustraciones o, incluso, la experiencia del experto en el campo en cuestión. Estos son muy importantes, ya que constituyen la fuente del conocimiento del sistema. 
+
+Posteriormente, se realizó la formalización del conocimiento; donde, en base a las fuentes identificadas, se definieron una lista de hechos, que posteriormente se emplearon para la estructuración de reglas. Esta etapa es una de las más largas, ya que, como la mayoría de las fuentes emplean un lenguaje técnico que solo un experto en el campo pude entender, se debe consultar al experto continuamente para evitar errores. Por otro lado, este proceso tiene alta criticidad, debido a que al omitir reglas o colocarlas inadecuadamente provocaría que el sistema proporcione conclusiones erróneas en algunos resultados, que luego se vean reflejados en el índice de asierto del software.
+
+Como tercer objetivo, se planteó el diseño de la base de conocimiento, que abarca el agrupamiento de éstas, bajo ciertos criterios, y el orden en que cada uno de estos debe ser procesado. Para esta tarea, se empleó el motor de inferencia CLIPS, que facilitó en gran medida el cumplimiento de este objetivo, ya que permite agrupar las reglas en módulos y tiene estrategias definidas de resolución de conflicto; esto es, que en el caso que se puedan disparar varias reglas, determina bajo ciertos criterios el orden en que deben ser ejecutadas.
+
+Luego, junto con el usuario, se diseñaron las interfaces gráficas. Estas debían cumplir requisitos como mostrar las notaciones y símbolos empleadas por el experto, habilitar la manipulación de objetos en un mapa para representar el escenario de batalla, entre otros. 
+
+Una vez culminadas la base de conocimiento y las interfaces gráficas, se debía elaborar los servicios que permitan la comunicación de los datos. Para esto, se empleo el lenguaje javascript de lado servidor, nodejs. Por medio de este, se logró establecer los servicios RESTful para cumplir con el objetivo planteado.
+
+Por último, se realizó la integración de las interfaces con los servicios de comunicación. Con esto, al crear un escenario por medio de la interfaz gráfica y solicitar la evaluación del sistema experto, se transformaban los datos ingresados en hechos, que el motor de inferencia pueda reconocer, y se enviaban por medio de los servicios. Una vez halladas las conclusiones para el escenario, estas pasaban nuevamente por los servicios de comunicación para ser mostradas textualmente y representadas en el mapa.
+
+Por otro lado, para determinar el índice de asertividad del sistema, se generaron  escenarios que fueron analizados tanto por el experto como por el software, para posteriormente realizar una comparación. El proceso de validación presentó resultados aceptables acerca de la capacidad del sistema experto para analizar escenarios. Con ello, se cumple con el objetivo de una alta capacidad de análisis.
+
+El presente trabajo se ha limitado al análisis de la misión establecida en un plan prediseñado, debido a la amplitud del problema. Además, el área de operaciones de la misión está limitada por un tamaño máximo, ya que al ser más extenso, podría darse la posibilidad que el terreno tenga múltiples climas e incluso zona horaria. Sin embargo, estas limitaciones pueden ser trabajadas posteriormente en otros proyectos, permitiendo la evolución del software y su utilidad en casos más complejos.
+
+
+%% >>> : - . - . - . - . - o - . - . - . - . - :
+
+%\section{Trabajos futuros}
+
+%Pa
+

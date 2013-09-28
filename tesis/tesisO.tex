@@ -1,0 +1,109 @@
+%\documentclass[12pt,a4paper,spanish,numbers=noenddot]{scrreprt}
+\documentclass[12pt, twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ngerman,american,%
+                ]{scrreprt}
+
+%\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+  colorlinks,%
+  citecolor=black,%
+  filecolor=black,%
+  linkcolor=black,%
+  urlcolor=black
+}
+
+\usepackage{natbib}
+\usepackage[refpages]{gloss}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+%\usepackage{longtable}
+%\usepackage{supertabular}
+%\usepackage{bigstrut}
+
+\usepackage{url}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{latexsym}
+
+%\usepackage{color}
+%\usepackage{marginnote}
+%\renewcommand*{\marginfont}{\color{blue}\sffamily}
+\usepackage[shadow,spanish,textsize=footnotesize]{todonotes}
+%\usepackage{showframe}
+%\usepackage[marginparwidth=79pt]{geometry}
+
+
+%\makegloss
+
+%\renewcommand{\glosslinkborder}{0 0 0}
+
+%\renewcommand\thesection{\thechapter.\arabic{section}} 
+
+%\usepackage{titlesec}
+%\newcommand{\bigrule}{\titlerule[0.5mm]}
+%\titleformat{\chapter}[display] % cambiamos el formato de los capítulos
+%{\bfseries\Huge} % por defecto se usarán caracteres de tamaño \Huge en negrita
+%{% contenido de la etiqueta
+% \titlerule % línea horizontal
+% \filleft % texto alineado a la derecha
+% \Large\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño \Large en lugar de \Huge
+% \Large\thechapter} % número de capítulo en tamaño \Large
+%{0mm} % espacio mínimo entre etiqueta y cuerpo
+%{\filleft} % texto del cuerpo alineado a la derecha
+%[\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
+
+
+
+\newcommand*{\ruta}{/gcca/hogar/Dropbox/gcca/gueco/doc/expo/tesis}%
+
+
+\begin{document}
+\frenchspacing
+\raggedbottom
+
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+
+
+% RESUMEN
+%\input{\ruta/resumen.tex}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\newpage
+\listoftodos
+
+
+% cap INTRODUCCIÓN
+%\input{\ruta/introduccion.tex}
+
+% cap PROBLEMA
+%\input{\ruta/descripcion-del-proyecto.tex}
+
+% cap MARCO-TEÓRICO
+%\input{\ruta/marco-teorico.tex}
+
+% cap VALIDACIÓN
+%\input{\ruta/validacion.tex}
+
+% cap CONCLUSIONES
+%\input{\ruta/conclusiones.tex}
+
+% BIBLIOGRAFÍA
+%\bibliographystyle{plainnat}
+%\bibliography{\ruta/tesis}
+
+\end{document}

@@ -1,0 +1,81 @@
+\chapter{Validación}
+
+El análisis de los escenarios consiste esencialmente en partir de los objetos identificados en un lugar geográfico (siendo este lugar el terreno), como las condiciones climáticas que se presentan en ese escenario y las características de ambos bandos en conflicto. El análisis realizado a un escenario identifica, por un lado, condiciones intermedias presentes en dicho escenario\footnote{Como la superioridad o inferioridad bélica, efecto de las condiciones climáticas, capacidad de movilidad de las tropas, entre otros aspectos.}, así como el tipo de estrategia a seguir, si en caso los aspectos que describen el escenario así lo permiten inferir en el proceso de evaluación del mismo. Los que se expone en este capítulo se basa en los enfoques de validación presentados por \citealt{Oleary88}.
+
+Los aspectos son considerados como un reflejo de todo aquello que afecta a los escenarios, agrupados en cuatro grandes grupos: terreno, condiciones meteorológicas, condiciones del enemigo y aliado. Así mismo, los aspectos del escenario permiten valorar el efecto que tienen las condiciones en conjunto, es decir, la influencia que recibe el análisis cuando un aspecto actúa en conjunción con otro.
+
+La validación del sistemas experto Gueco es un proceso en el que se precisa la confiabilidad del análisis hecho para obtener las condiciones y estrategia a seguir ante los aspectos que un escenario presenta. Los criterios para evaluar la calidad del proceso de análisis de un escenario se basan en los estudios sobre sensibilidad, la especificidad y la potencia de predicción de dicho análisis.
+
+Se define como sensibilidad a la capacidad del análisis realizado a un escenario para encontrar las condiciones y estrategia adecuadas a los aspectos de los escenarios en los que en realidad se aplican las condiciones y estrategia en estudio, es decir, la proporción de aciertos o condiciones y estrategia positivas, identificados como tales por el análisis del escenario en evaluación respecto a las conclusiones del experto humano. Por otro lado, se entiende por especificidad a la capacidad del análisis de un escenario para desechar a aquellas condiciones y estrategias que no son representados por los aspectos de los escenarios en los que en realidad no deben aplicarse dichas condiciones y estrategia en estudio, es decir, aquellas condiciones y estrategia que son negativos verdaderos (no aplicables al escenario en cuestión).
+
+Para completar las pruebas de validez de análisis, se determina la potencia o valor predictivo; este valor indica la probabilidad de que en un escenario se apliquen las condiciones y estrategia en estudio cuando el resultado del análisis provisto por el sistema experto expresa dichas condiciones y estrategia. Una prueba con un valor predictivo positivo de 0,8 indica que de cada 100 escenarios evaluados en los que se concluye ciertas condiciones y estrategia como positivas, 80 de ellas tienen las condiciones y se aplica la estrategia planteada, y se detecta una proporción de 0,1 de positivos falsos. Una prueba con valor predictivo negativo de 0,9 indicaría que de 100 escenarios evaluados con un resultado en el que no se recomienda una estrategia dada, 90 de ellas carecen de las condicione para concluir dicha estrategia, y la proporción de 0,1 restante sería negativos falsos. El valor predictivo se encuentra estrechamente vinculado a los índices de sensibilidad y especificidad del análisis de escenarios.
+
+Se elaboró para la prueba un cuadro de confiabilidad, en el cual cada $A_i$ representa una estrategia, donde cada $A_i$ de la fila es la elección del sistema experto y cada $A_i$ de la columna es la elección del experto militar; de está manera, cada $A_{ij}$ es la cantidad de escenarios que el sistema experto concluyó $A_i$ y el experto humano, $A_j$. El cuadro \ref{cuadro:SEcontraEH} es un modelo de registro sobre el cual se aplicarían los índices de confiabilidad mostrados en el cuadro \ref{cuadro:indicesdeconfibialidad}, donde la sensibilidad, especificidad, valor predictivo positivo y valor predictivo negativo están representados por las letras $S$, $E$, $VPP$ y $VPN$, respectivamente.
+
+\begin{table}[!ht]
+  \begin{center}
+    $$ 
+    \begin{array}{cc|cccc}
+      & & \multicolumn{4}{c}{\overbrace{
+          \begin{array}{cccccccccc}&&&&&&&&&\end{array}}^{Experto\ Humano}} \\
+          &  & A_1    & A_2     & \cdots & A_n   \\\hline
+    \multirow{4}*{
+      $^{Sistema\ Experto}\left\{\begin{array}{c}\vspace{.2em}\\\\\\\\\end{array}\right.$}
+     & A_1    & A_{11}  & A_{12}  & \cdots & A_{1n} \\
+     & A_2    & A_{21}  & A_{22}  & \cdots & A_{2n} \\
+     & \vdots & \vdots & \vdots  & \ddots & \vdots\\
+     & A_n    & A_{n1}  & A_{n2}  & \cdots & A_{nn}\\
+    \end{array}
+      % }^{Experto Humano}
+    $$
+
+    \caption{Cuadro de elecciones Sistema Experto -- Experto Humano}
+    \label{cuadro:SEcontraEH}
+  \end{center}
+\end{table}
+
+\begin{table}[!ht]
+  \begin{center}
+    $$
+    S_i = \displaystyle\frac{A_{ii}}{\displaystyle\sum_{p=1}^nA_{pi}} \qquad
+    E_i = \displaystyle\frac{\displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq}}{\displaystyle\sum_{p=1}^nA_{ip} + \displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq} - A_{ii}}
+    $$
+    $$
+    VPP_i = \displaystyle\frac{A_{ii}}{\displaystyle\sum_{p=1}^nA_{ip}} \qquad
+    VPN_i = \displaystyle\frac{\displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq}}{\displaystyle\sum_{p=1}^nA_{pi} + \displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq} - A_{ii}}
+    $$
+    \caption{Formulas de índices de confiabilidad}
+    \label{cuadro:indicesdeconfibialidad}
+  \end{center}
+\end{table}
+
+Para elaborar las pruebas de \emph{Gueco}, se prepararon 56 escenarios distintos, en los que se cubren las 8 estrategias ofensivas que el sistema experto puede concluir. En el cuadro \ref{cuadro:indicesdegueco} se muestra los resultados obtenidos al evaluar al sistema experto Gueco en contraste con las conclusiones del experto militar.
+
+\begin{table}[!ht]
+  \begin{center}
+    $$
+    \left(\begin{array}{c|cccccccc}
+          & A_1 & A_2 & A_3 & A_4 & A_5 & A_6 & A_7 & A_8\\\hline
+      A_1 &  4  &     &     &     &     &     &     &   \\
+      A_2 &     &  6  &     &  1  &     &     &  2  &   \\
+      A_3 &     &     &  7  &     &     &     &     &   \\
+      A_4 &     &     &     &  5  &     &     &     &   \\
+      A_5 &     &     &     &     &  7  &     &     &   \\
+      A_6 &     &     &     &     &     &  7  &     &   \\
+      A_7 &  2  &  1  &     &  1  &     &     &  5  &   \\
+      A_8 &  1  &     &     &     &     &     &     &  7\\
+    \end{array}\right)
+    $$
+
+    \begin{tabular}{r@{ = }c}
+      Sensibilidad & $0,86$\\
+      Especificidad & $0,98$\\
+      Valor predictivo positivo & $0,89$\\
+      Valor predictivo negativo & $0,98$\\
+    \end{tabular}
+    \caption{Índices de confiabilidad de \emph{Gueco}}
+    \label{cuadro:indicesdegueco}
+  \end{center}
+\end{table}
+
+Los hallazgos al analizar la muestra de escenarios indican que, para la selección de alguna estrategia ofensiva, el sistema experto Gueco presenta un equilibrio aceptable entre sensibilidad $(0,86)$ y especificidad $(0,98)$, debido a que estas proporciones indican que de $100$ estrategias ofensivas a ser evaluadas, se identifica a $86$ de los que en realidad aplicaría el experto militar y, además, discrimina a $96$ como escenarios en los que no aplica una estrategia cuando verdaderamente no es aplicable. Cabe destacar que la potencia de predicción respalda unos resultados aceptables al momento de analizar escenarios en los que tanto el sistema experto como el experto militar concluyen con una afirmación positiva acerca de alguna estrategia a aplicar.
