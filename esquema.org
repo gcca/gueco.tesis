@@ -1,9 +1,56 @@
-#+TITLE: Gueco: Sistema Experto de Soporte a la Planificación Militar
+#+TITLE: Gueco: Sistema experto de soporte en el planeamiento estratégico militar
 #+AUTHOR: cristHian Gz. (gcca), César Cárdenas (cccg)
 #+DATE: 2013-09-27 sam.
 
-* TODO Carátula y diseño base
+* Estructura
 
-* TODO Prefacio y/o Introducción del proyecto: objetivos y alcance
+Introducción
 
-* TODO Estado del arte
+PARTE I: APORTE TEÓRICO
+
+Capítulo 1: Planteamiento del problema
+  1.1 Contexto
+  1.2 Definición del problema
+  1.3 Objetivos
+  1.4 Justificación
+  1.5 Alcance
+
+Capítulo 2: Marco teórico
+  2.1 Planeamiento militar
+  2.2 Sistemas basados en conocimiento
+  2.3 Metodología CommonKADS
+  2.4 Marco de trabajo SCRUM
+
+Capítulo 3: Estado del arte
+  3.1 Arquitectura multi-agente para simulación de unidades militares
+  3.2 Inteligencia artificial y juegos para el soporte de decisiones de comando y control
+  3.3 Método de estructuración de problemas en comando y control militar
+
+Capítulo 4: Análisis
+  4.1 Descripción de la organización
+  4.2 Aspectos conceptuales del problema
+  4.3 Descripción del conocimiento
+  4.4 Identificación de requerimientos
+  4.5 Análisis de la solución
+
+PARTE II: APORTE EXPERIMENTAL
+
+Capítulo 5: Descripción del sistema experto Gueco
+  5.1 Funcionalidades de la aplicación
+  5.2 Diseño de la aplicación
+  5.3 Arquitectura de la aplicación
+
+Capítulo 6: Elaboración del sistema experto
+  6.1 Actividades de desarrollo
+  6.2 Iteraciones del desarrollo
+  6.3 Descripción de la aplicación
+
+PARTE III: VALIDACIÓN Y RESULTADOS
+
+Capítulo 7: Validación del sistema experto
+  7.1 Descripción del proceso de validación
+  7.2 Resultados del proceso de validación
+
+Capítulo 8: Conclusiones y trabajos futuros
+  8.1 Conclusiones
+  8.2 Trabajos futuros
