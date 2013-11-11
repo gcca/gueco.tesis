@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper,footinclude=true,headinclude=true,oneside,spanish]{memoir}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pgffor}%
+\usepackage{pgfkeys}%
+
+\newcommand*{\ruta}{.}%
+
+\newcommand*{\MaxNumOfParts}{3}%
+\newcommand*{\MaxNumOfChapters}{4}%
+\newcommand*{\MaxNumOfSections}{5}%
+\pgfkeyssetvalue{part/i}{Aporte Teórico}
+\pgfkeyssetvalue{part/ii}{Aporte Experimental}
+\pgfkeyssetvalue{part/iii}{Validación y Conclusiones}
+
+\title{\emph{Gueco}\\ Sistema experto de soporte a la planificación militar}
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\frenchspacing
+%\raggedbottom
+\frontmatter
+
+\tableofcontents
+%\listoftables
+%\listoffigures
+
+\input{\ruta/intro}  % Resumen e introducción
+
+\mainmatter
+\foreach \p in {i,ii,iii}{%
+  \part{{\pgfkeysvalueof{part/\p}}}
+  \foreach \c in {1,2,...,\MaxNumOfChapters}{%
+    \IfFileExists{\ruta/\p/\c/cap} {%
+      \input{\ruta/\p/\c/cap}%
+      \foreach \s in {1,2,...,\MaxNumOfSections}{%
+        \IfFileExists{\ruta/\p/\c/\s} {%
+          \input{\ruta/\p/\c/\s}%
+        }{%
+          % ntd
+        }%
+      }%
+    }{%
+      % ntd
+    }%
+  }%
+}%
+
+% \backmatter
+% Apéndice
+
+\end{document}
