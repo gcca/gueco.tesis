@@ -1,0 +1,8 @@
+tesis.tex
+auto
+*.aux
+*.lof
+*.log
+*.lot
+*.pdf
+*.toc
