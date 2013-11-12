@@ -10,6 +10,19 @@
 \usepackage{pgffor}%
 \usepackage{pgfkeys}%
 
+\usepackage{breakurl}
+\usepackage{hyperref}
+
+\usepackage[style=long,nolist,acronym,sanitize=none]{glossaries}%
+\renewcommand*{\acronymname}{Acr\'onimos}
+\makeglossaries
+\newacronym{picb}{PICB}{Preparación de Inteligencia del Campo de Batalla}
+
+\usepackage{tabularx}
+
+\usepackage[shadow,spanish,textsize=footnotesize]{todonotes}%
+\setlength{\marginparwidth}{3.1cm}
+
 \newcommand*{\ruta}{.}%
 
 \newcommand*{\MaxNumOfParts}{3}%
@@ -29,7 +42,8 @@
 \thispagestyle{empty}
 
 \frenchspacing
-%\raggedbottom
+\raggedbottom
+
 \frontmatter
 
 \tableofcontents
@@ -59,5 +73,12 @@
 
 % \backmatter
 % Apéndice
+
+% % BIBLIOGRAFÍA
+% \bibliographystyle{plainnat}
+% \bibliography{\ruta/tesis}
+
+% GLOSARIO
+\printglossaries
 
 \end{document}
