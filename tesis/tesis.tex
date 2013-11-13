@@ -14,17 +14,17 @@
 \usepackage{hyperref}
 \usepackage{breakurl}
 
+\newcommand*{\ruta}{.}%
+
 \usepackage[style=long,nolist,acronym,sanitize=none]{glossaries}%
 \renewcommand*{\acronymname}{Acr\'onimos}
+\input{\ruta/glos}
 \makeglossaries
-\newacronym{picb}{PICB}{Preparación de Inteligencia del Campo de Batalla}
 
 \usepackage{tabularx}
 
 \usepackage[shadow,spanish,textsize=footnotesize]{todonotes}%
 \setlength{\marginparwidth}{3.1cm}
-
-\newcommand*{\ruta}{.}%
 
 \newcommand*{\MaxNumOfParts}{3}%
 \newcommand*{\MaxNumOfChapters}{4}%
