@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper,footinclude=true,headinclude=true,oneside,spanish]{memoir}
+% \documentclass[12pt,a4paper,oneside]{memoir}
 
 \usepackage{babel}
 \usepackage[utf8]{inputenc}
@@ -10,8 +11,8 @@
 \usepackage{pgffor}%
 \usepackage{pgfkeys}%
 
-\usepackage{breakurl}
 \usepackage{hyperref}
+\usepackage{breakurl}
 
 \usepackage[style=long,nolist,acronym,sanitize=none]{glossaries}%
 \renewcommand*{\acronymname}{Acr\'onimos}
@@ -47,8 +48,9 @@
 \frontmatter
 
 \tableofcontents
-%\listoftables
-%\listoffigures
+\listoftables
+\listoffigures
+\listoftodos
 
 \input{\ruta/intro}  % Resumen e introducción
 
