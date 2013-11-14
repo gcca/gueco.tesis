@@ -2,6 +2,10 @@
 
 \usepackage{babel}
 \usepackage[utf8]{inputenc}
+
+\usepackage[default]{cantarell}
+\usepackage[T1]{fontenc}
+
 \usepackage{graphicx}
 
 \usepackage{amsmath}
@@ -10,20 +14,32 @@
 \usepackage{pgffor}%
 \usepackage{pgfkeys}%
 
-\usepackage{hyperref}
+\usepackage[colorlinks=true,pagebackref=false,pdftex]{hyperref}
+\hypersetup
+{
+  linkcolor=red,
+  pdfauthor={Cristhian Gonzales, César Cárdenas},
+  pdfsubject={Sistema experto de soporte en el planeamiento estratégico militar},
+  pdftitle={Gueco: Sistema experto de soporte en el planeamiento estratégico militar},
+  pdfkeywords={Expert, System, Military, Militar, Strategy, Thesis}
+}
 \usepackage{breakurl}
 
 \newcommand*{\ruta}{.}%
 
-\usepackage[style=long,nolist,acronym,sanitize=none]{glossaries}%
+\usepackage[acronym,toc,xindy]{glossaries}%
+\usepackage{glossary-tree}
+\glssetwidest{AAAAAAAAA}
+\glossarystyle{alttreehypergroup}
 \renewcommand*{\acronymname}{Acr\'onimos}
-\input{\ruta/glos}
+\renewcommand{\glsnamefont}[1]{\makefirstuc{#1}}
+\include{\ruta/glos}
 \makeglossaries
 
 \usepackage{tabularx}
 
 \usepackage[shadow,spanish,textsize=footnotesize]{todonotes}%
-\setlength{\marginparwidth}{3.1cm}
+\setlength{\marginparwidth}{3.3cm}
 
 \newcommand*{\MaxNumOfParts}{3}%
 \newcommand*{\MaxNumOfChapters}{4}%
@@ -45,7 +61,8 @@
 \raggedbottom
 
 \frontmatter
-
+%\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{3}
 \tableofcontents
 \listoftables
 \listoffigures
@@ -80,6 +97,8 @@
 % \bibliography{\ruta/tesis}
 
 % GLOSARIO
+
+% \glsaddall
 \printglossaries
 
 \end{document}
