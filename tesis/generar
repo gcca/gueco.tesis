@@ -1,11 +1,16 @@
 #!/usr/bin/fish
 # -*- mode: sh -*-
-set -x PATH /gcca/inframundo/ps/texlive/bin/x86_64-linux $PATH
+# set -x PATH /gcca/inframundo/ps/texlive/bin/x86_64-linux $PATH
 set BASE $PWD
 set TMP /dev/shm
-# pdflatex -draftmode tesis
+if test ! -e "$TMP/tesis.pdf"
+  pdflatex --output-directory="$TMP" -draftmode tesis
+end
+if test ! -e "$TMP/tesis.bib"
+ ln -s "$BASE/tesis.bib" "$TMP"
+end
 cd "$TMP"
-# bibtex tesis
+bibtex tesis
 makeglossaries tesis
 cd "$BASE"
 pdflatex --output-directory="$TMP" tesis
