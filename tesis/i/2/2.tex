@@ -1,0 +1,74 @@
+\section{CommonKADS y Sistemas Basados en Conocimiento}
+
+\todo{Mejor que sea un solo cap para cKADS y SBC}
+\todo{Revisar. Creo que no necesita modificar}
+\todo{Mejorar la presentación de las referencias}
+
+CommonKADS es la metodología que permite detectar las oportunidades en las organizaciones donde se desarrollan y aplican recursos de conocimiento; así, proporciona herramientas para la gestión del conocimiento de la organización. También da métodos para llevar a cabo un análisis detallado de las tareas y los procesos en los que se aplica el conocimiento. Otra cualidad es que toma en cuenta tanto la experiencia como las estructuras de información que existen en la organización ya que refleja la influencia de paradigmas como el análisis y el diseño estructurado, la teoría de las organizaciones, la orientación por objetos, la gerencia de calidad y la reingeniería de procesos. También facilita el desarrollo del sistema, donde permite obtener las especificaciones y los requerimientos de un problema y su solución.
+Esta metodología fue conocida inicialmente como KADS (Knowledge Acquisition Designer System) porque se buscaba un método para la adquisición del conocimiento en el proceso de construcción de un sistema basado en conocimiento. Después se amplió el proyecto a la construcción de una metodología completa debido a los buenos resultados que obtuvo y fue así como paso a ser CommonKADS, la cual empieza desde el análisis de la organización hasta la gestión del proyecto.
+CommonKADS se basa en un ciclo de vida donde el desarrollo se divide en una serie de fases con un orden predeterminado. En cada fase debe llevarse a cabo actividades distintas y la final de cada fase se obtiene documentos, informes, diseños o programas para poder pasar a la otra fase. Las fases principales de esta metodología son:
+
+\begin{enumerate}
+\item Análisis: enfocado a entender el problema. Los documentos que se deben obtener de esta fase son: documento del proyecto, de los requerimientos, del modelo conceptual y de viabilidad.
+\item Diseño: para una descripción física en la que se especifican los componentes del sistema, también se hace una descripción de su comportamiento.
+\item Implementación del sistema: que considera tanto la integración del software como su adaptación en la organización.
+\item Instalación.
+\item Uso: para entender el manejo del sistema y los resultados que proporciona.
+\end{enumerate}
+
+Los modelos de CommonKADS son estructuras de requerimientos del sistema de conocimiento, que partiendo de diferentes aspectos sirven para describir el conocimiento de la solución de problemas, como se menciona en \citealt[pg. 36]{Henao}. Siendo estos modelos:
+
+\begin{enumerate}
+\item Modelo de la Organización (OM): Analiza la organización.
+  \begin{enumerate}
+  \item OM-1: Identificación de los problemas y oportunidades en la organización, orientados al conocimiento.
+  \item OM-2: Descripción de los aspectos de la organización que tienen impacto o están afectados.
+  \item OM-3: Descripción del proceso desde el punto de vista de las tareas que lo conforman.
+  \item OM-4: Descripción del componente de conocimiento del modelo de la organización y sus principales características.
+  \item OM-5: Documento de viabilidad de la decisión.
+  \end{enumerate}
+
+\item Modelo de Tarea (TM): Describe a un nivel general las tareas que son realizadas en el entorno de la organización, proporcionando la distribución de tareas entre agentes, según \citealt[pg. 39]{Henao}.
+  \begin{enumerate}
+  \item TM-1: Descripción de las tareas dentro del proceso objetivo.
+  \item TM-2: Especificación del conocimiento empleado por una tarea.
+  \end{enumerate}
+
+\item Modelo de Agente (AM): Un agente es un ejecutor de una tarea que puede ser humano, software o cualquier otra entidad capaz de realizarla. En este modelo se describen las competencias, características, autoridad y restricciones para actuar que poseen los agentes (AM-1: Formulario agente).
+
+\item Modelo de Comunicaciones (CM): Detalla el intercambio de información entre los diferentes agentes involucrados en la ejecución de las tareas descritas en el modelo de tarea. Los formularios de estos modelos son:
+  \begin{enumerate}
+  \item CM-1: Especificación de las transacciones que participan en el diálogo entre dos agentes en el modelo de comunicaciones.
+  \item CM-2: Especificación de los mensajes y la información que forman una transacción individual dentro del modelo de comunicaciones.
+  \end{enumerate}
+
+\item Modelo del Conocimiento (EM): Este es el modelo principal de la metodología CommonKADS y modela el conocimiento de resolución de problemas empleado por un agente para realizar una tarea. El modelo de la experiencia distingue entre el conocimiento de la aplicación y el conocimiento de resolución del problema. El conocimiento de la aplicación se divide en tres subniveles: nivel del dominio (conocimiento declarativo sobre el dominio), nivel de inferencia (estructuras genéricas de inferencia) y nivel de tarea (orden de las inferencias), mencionado en \citealt[pg. 43]{Henao}.
+\end{enumerate}
+
+Estos modelos están clasificados en tres niveles:
+
+\begin{enumerate}
+\item Nivel del entorno: Relaciona la información del entorno del sistema de conocimientos. Implica tener conocimiento del contexto de la organización, su ambiente y de los factores críticos de éxito que corresponden al sistema. En este nivel se encuentran los modelos Organizacional, de Tareas y de Agentes.
+\item Nivel conceptos: Especifica lo que se quiere modelar. Es necesario tener modelos que presenten la descripción conceptual del modelo aplicado a una tarea y los datos que son manejados y entregados por un sistema. En este nivel se tiene el modelo de conocimientos y el de comunicación.
+\item Nivel de componentes: Identifica los aspectos técnico de programación y de construcción en el ordenador. En este nivel está el modelo de diseño.
+\end{enumerate}
+
+Los modelos de experiencia y agentes proporcionan los requisitos de entrada que guiarán la implementación del sistema a través del modelo de diseño.
+CommonKADS también plantea una serie de consideraciones para la gestión del proyecto de conocimiento formada por cuatro actividades:
+\begin{enumerate}
+\item Revisión: Revisa el estado actual del proyecto y se definen los principales objetivos para el siguiente ciclo. Este es el primer estado de cada ciclo.
+\item Riesgo: Identifica los obstáculos que se pueden presentar en el desarrollo del proyecto y que pueden impiden que se cumpla con los objetivos definitivos.
+\item PM-1: Identificación y valoración de los riesgos del proyecto.
+\item Plan: Se hace un plan detallado para el siguiente ciclo. Cuenta con el formulario:
+\item PM-2: Como describir el estado del modelo como un objetivo a ser alcanzado en el proyecto.
+\item Seguimiento: Registra los cambios o resultados obtenidos.
+\end{enumerate}
+
+CommonKADS es importante dentro de las organizaciones porque ofrece un marco para la especificación del conocimiento independiente de la implementación, combinando un conjunto de modelos de conocimiento reutilizable. Además propone un ciclo de vida en donde se indican las fases, las actividades y los productos más relevantes para un proyecto de desarrollo de un sistema basado en conocimientos.
+Una de las principales cualidades de CommonKADS es el planteamiento del desarrollo de modelos que reflejan diferentes vistas del proyecto. Entre ellos se resalta el modelo de conocimiento en el que las partes que lo conforman son independientes del dominio.
+Los modelos que propone la metodología permiten reflejar diferentes visiones fundamentales en el sistema, desde el punto de vista de la empresa hasta la forma como éste se diseña. Esta metodología es muy amplia, todos los aspectos que se necesitan para llevar a cabo un buen proyecto de desarrollo de un sistema basado en conocimientos, desde el estudio del problema hasta la implantación del software y su gestión.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../tesis"
+%%% End:
