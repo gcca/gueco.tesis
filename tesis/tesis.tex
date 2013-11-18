@@ -8,6 +8,7 @@
 
 \usepackage{graphicx}
 
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 
@@ -18,6 +19,7 @@
 \hypersetup
 {
   linkcolor=red,
+  citecolor=blue,
   pdfauthor={Cristhian Gonzales, César Cárdenas},
   pdfsubject={Sistema experto de soporte en el planeamiento estratégico militar},
   pdftitle={Gueco: Sistema experto de soporte en el planeamiento estratégico militar},
@@ -27,16 +29,19 @@
 
 \newcommand*{\ruta}{.}%
 
+\usepackage{natbib}
+
 \usepackage[acronym,toc,xindy]{glossaries}%
-\usepackage{glossary-tree}
-\glssetwidest{AAAAAAAAA}
-\glossarystyle{alttreehypergroup}
+\usepackage{glossary-list}
+\glossarystyle{altlisthypergroup}
 \renewcommand*{\acronymname}{Acr\'onimos}
-\renewcommand{\glsnamefont}[1]{\makefirstuc{#1}}
+\renewcommand{\glsnamefont}[1]{\textbf{\makefirstuc{#1}}}
 \include{\ruta/glos}
 \makeglossaries
 
+
 \usepackage{tabularx}
+
 
 \usepackage[shadow,spanish,textsize=footnotesize]{todonotes}%
 \setlength{\marginparwidth}{3.3cm}
@@ -89,15 +94,14 @@
   }%
 }%
 
-% \backmatter
+\backmatter
 % Apéndice
 
 % % BIBLIOGRAFÍA
-% \bibliographystyle{plainnat}
-% \bibliography{\ruta/tesis}
+\bibliographystyle{plainnat}
+\bibliography{\ruta/tesis}
 
 % GLOSARIO
-
 % \glsaddall
 \printglossaries
 
