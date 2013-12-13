@@ -1,9 +1,0 @@
-#!/bin/fish
-# -*- mode: sh -*-
-cd /dev/shm/oo
-set -lx PATH /gcca/inframundo/ps/texlive/bin/x86_64-linux $PATH
-set -l B /gcca/hogar/Dropbox/gcca/gueco/doc/expo/tesis
-#pdflatex -draftmode $B/tesis
-#bibtex tesis
-#makeglossaries tesis
-pdflatex $B/tesis
