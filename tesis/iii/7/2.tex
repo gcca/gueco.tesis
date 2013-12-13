@@ -1,0 +1,76 @@
+\section{Resultado del proceso de validación}
+
+Se elaboró para la prueba un cuadro de confiabilidad, en el cual cada $A_i$ representa una estrategia, donde cada $A_i$ de la fila es la elección del sistema experto y cada $A_i$ de la columna es la elección del experto militar; de está manera, cada $A_{ij}$ es la cantidad de escenarios que el sistema experto concluyó $A_i$ y el experto humano, $A_j$. El cuadro \ref{cuadro:SEcontraEH} es un modelo de registro sobre el cual se aplicarían los índices de confiabilidad mostrados en el cuadro \ref{cuadro:indicesdeconfibialidad}, donde la sensibilidad, especificidad, valor predictivo positivo y valor predictivo negativo están representados por las letras $S$, $E$, $VPP$ y $VPN$, respectivamente.
+
+\begin{table}[H]
+  \begin{center}
+    $$
+    \begin{array}{cc|cccc}
+      & & \multicolumn{4}{c}{\overbrace{
+          \begin{array}{cccccccccc}&&&&&&&&&\end{array}}^{Experto\ Humano}} \\
+          &  & A_1    & A_2     & \cdots & A_n   \\\hline
+    \multirow{4}*{
+      $^{Sistema\ Experto}\left\{\begin{array}{c}\vspace{.2em}\\\\\\\\\end{array}\right.$}
+     & A_1    & A_{11}  & A_{12}  & \cdots & A_{1n} \\
+     & A_2    & A_{21}  & A_{22}  & \cdots & A_{2n} \\
+     & \vdots & \vdots & \vdots  & \ddots & \vdots\\
+     & A_n    & A_{n1}  & A_{n2}  & \cdots & A_{nn}\\
+    \end{array}
+      % }^{Experto Humano}
+    $$
+
+    \caption{Cuadro de elecciones Sistema Experto -- Experto Humano}
+    \label{cuadro:SEcontraEH}
+  \end{center}
+\end{table}
+
+\begin{table}[H]
+  \begin{center}
+    $$
+    S_i = \displaystyle\frac{A_{ii}}{\displaystyle\sum_{p=1}^nA_{pi}} \qquad
+    E_i = \displaystyle\frac{\displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq}}{\displaystyle\sum_{p=1}^nA_{ip} + \displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq} - A_{ii}}
+    $$
+    $$
+    VPP_i = \displaystyle\frac{A_{ii}}{\displaystyle\sum_{p=1}^nA_{ip}} \qquad
+    VPN_i = \displaystyle\frac{\displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq}}{\displaystyle\sum_{p=1}^nA_{pi} + \displaystyle\sum_{p,q \in ([1,n]-\{i\})}A_{pq} - A_{ii}}
+    $$
+    \caption{Formulas de índices de confiabilidad}
+    \label{cuadro:indicesdeconfibialidad}
+  \end{center}
+\end{table}
+
+Para elaborar las pruebas de \emph{Gueco}, se prepararon 56 escenarios distintos, en los que se cubren las 8 estrategias ofensivas que el sistema experto puede concluir. En el cuadro \ref{cuadro:indicesdegueco} se muestra los resultados obtenidos al evaluar al sistema experto Gueco en contraste con las conclusiones del experto militar.
+
+\begin{table}[H]
+  \begin{center}
+    $$
+    \left(\begin{array}{c|cccccccc}
+          & A_1 & A_2 & A_3 & A_4 & A_5 & A_6 & A_7 & A_8\\\hline
+      A_1 &  4  &     &     &     &     &     &     &   \\
+      A_2 &     &  6  &     &  1  &     &     &  2  &   \\
+      A_3 &     &     &  7  &     &     &     &     &   \\
+      A_4 &     &     &     &  5  &     &     &     &   \\
+      A_5 &     &     &     &     &  7  &     &     &   \\
+      A_6 &     &     &     &     &     &  7  &     &   \\
+      A_7 &  2  &  1  &     &  1  &     &     &  5  &   \\
+      A_8 &  1  &     &     &     &     &     &     &  7\\
+    \end{array}\right)
+    $$
+
+    \begin{tabular}{r@{ = }c}
+      Sensibilidad & $0,86$\\
+      Especificidad & $0,98$\\
+      Valor predictivo positivo & $0,89$\\
+      Valor predictivo negativo & $0,98$\\
+    \end{tabular}
+    \caption{Índices de confiabilidad de \emph{Gueco}}
+    \label{cuadro:indicesdegueco}
+  \end{center}
+\end{table}
+
+Los hallazgos al analizar la muestra de escenarios indican que, para la selección de alguna estrategia ofensiva, el sistema experto Gueco presenta un equilibrio aceptable entre sensibilidad $(0,86)$ y especificidad $(0,98)$, debido a que estas proporciones indican que de $100$ estrategias ofensivas a ser evaluadas, se identifica a $86$ de los que en realidad aplicaría el experto militar y, además, discrimina a $96$ como escenarios en los que no aplica una estrategia cuando verdaderamente no es aplicable. Cabe destacar que la potencia de predicción respalda unos resultados aceptables al momento de analizar escenarios en los que tanto el sistema experto como el experto militar concluyen con una afirmación positiva acerca de alguna estrategia a aplicar.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../tesis"
+%%% End:
